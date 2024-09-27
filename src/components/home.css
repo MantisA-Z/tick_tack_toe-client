@@ -1,0 +1,110 @@
+.container {
+  height: 100vh;
+  background-image: url("../../public/home.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.controllers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  position: fixed;
+}
+
+.display {
+  background-color: aliceblue;
+  justify-self: end;
+  display: block;
+  position: absolute;
+  right: 20%;
+  border-radius: 2rem;
+  transition-property: background-color, transform, border, color, padding;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.tab {
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-image: url("../../public/create.jpg");
+  background-position: -10px -10px;
+  border-radius: 2rem;
+  transition-property: background-color, transform, border, color, padding;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.display:hover {
+  transform: translateY(-50px);
+  transform: translateX(-20px);
+}
+
+.tab input {
+  border-radius: 4px;
+  border: none;
+  transition-property: color, background-color, padding, transform, border;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.tab input:hover {
+  transform: scale(1.2);
+  padding: 5px;
+  border: 3px solid limegreen;
+}
+
+.tab:hover {
+  padding: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+.tab input {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.2rem;
+}
+
+.tab button {
+  font-size: 2rem;
+  width: 120px;
+}
+
+button {
+  font-size: 2.5rem;
+  font-family: monospace;
+  font-weight: bold;
+  border: none;
+  padding: 0.4rem;
+  width: 270px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition-property: background-color, transform, border, color, padding;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  box-sizing: border-box;
+}
+
+button:hover {
+  border: 1px solid black;
+  color: white;
+  background-color: rgb(17, 17, 17);
+  transform: translateY(-10px);
+  padding: 0.6rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.show {
+  display: block;
+}

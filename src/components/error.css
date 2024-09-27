@@ -1,0 +1,23 @@
+.errorContainer {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-image: url("../../public/sadCat.jpg");
+  background-color: white;
+  background-position: top right;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorMsg::before {
+  content: "Error: ";
+  width: 12px;
+  color: #5521db;
+}
+
+.sorryMsg::after {
+  content: " really";
+  color: red;
+}
