@@ -1,0 +1,98 @@
+.gameBox {
+  height: 100vh;
+  background-image: url("../../public/gameBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.role {
+  font-size: 2rem;
+  font-weight: bolder;
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 8px;
+}
+
+.turn {
+  color: black;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  font-size: 2rem;
+  transition-property: background-color, color, padding, margin;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.turn:hover {
+  background-color: black;
+  color: white;
+}
+
+.turn:hover::after {
+  background-color: black;
+  color: white;
+  content: ", ...";
+  transition-property: background-color, color, padding, margin;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.info {
+  color: black;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  font-size: 2rem;
+  transition-property: background-color, color, padding, margin;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.info:hover {
+  background-color: black;
+  color: white;
+}
+
+.info:hover::after {
+  background-color: black;
+  color: white;
+  content: ", just wait ok!";
+  transition-property: background-color, color, padding, margin;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.gameContainer {
+  background-color: transparent;
+  width: 375px;
+  height: 375px;
+  display: grid;
+  grid-template-columns: repeat(3, 125px);
+  grid-template-rows: repeat(3, 125px);
+  flex: 1;
+}
+
+.gameContainer div {
+  background-color: white;
+  border: 3px solid black;
+  display: flex;
+  font-size: 3rem;
+  font-family: sans-serif;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-property: color, font-size, background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.gameContainer div:hover {
+  font-size: 3.5rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(128, 128, 128);
+}

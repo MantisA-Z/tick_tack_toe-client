@@ -3,13 +3,15 @@ import { io } from "socket.io-client";
 
 const socketContext = createContext(null);
 
-export const useSocketContext = () => useContext(socketContext);
+const useSocketContext = () => useContext(socketContext);
 
-export const SocketProvider = ({ children }) => {
+const SocketProvider = ({ children }) => {
   const socket = useMemo(() => {
-    return io("http://127.0.0.1:8000");
+    return io(process.env.REACT_APP_SERVER_URL);
   }, []);
   return (
     <socketContext.Provider value={socket}>{children}</socketContext.Provider>
   );
 };
+
+export { useSocketContext, SocketProvider };

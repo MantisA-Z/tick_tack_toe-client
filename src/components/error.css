@@ -2,19 +2,36 @@
   height: 100vh;
   padding: 0;
   margin: 0;
-  background-image: url("../../public/sadCat.jpg");
   background-color: white;
-  background-position: top right;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.errorContainer p {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+img {
+  position: absolute;
+  bottom: 100px;
+  top: 300px;
+  transition-property: width, transform, background-color, color, padding,
+    marginTop, right, left, top;
+  transition-duration: 5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
 }
 
 .errorMsg::before {
   content: "Error: ";
   width: 12px;
   color: #5521db;
+}
+
+.sorryMsg {
+  font-size: 2rem;
 }
 
 .sorryMsg::after {
